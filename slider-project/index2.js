@@ -35,12 +35,16 @@ const showSelectImg=()=>{
         `
         sliderParent.appendChild(div)
     })
-
+    const duration=document.getElementById('duration').value || 2000;
+    if(duration < 0){
+        alert('Please enter a valid timing')
+        return
+    }
     changeSlider(0)
     let timer=setInterval(()=>{
         index++
         changeSlider(index)
-    },1000)
+    },duration)
 
 
 }
@@ -52,6 +56,18 @@ const changeImg=(num)=>{
 
 const changeSlider=number=>{
     const items=document.querySelectorAll('.img')
+    if(number < 0){
+        number=items.length-1;
+        index=number
+    }
+    if(number >= items.length){
+        index=0
+        number=index
+    }
+    items.forEach(elem => {
+        elem.style.display='none'
+    })
+    items[number].style.display='block'
     console.log(items,number)
 }
 
@@ -100,6 +116,8 @@ searchBtn.addEventListener('click',()=>{
 })
 
 createBtn.addEventListener('click',()=>{
+    selectBox.style.display='none'
+    document.getElementById('input-group').style.display='none'
    showSelectImg()
 })
 
