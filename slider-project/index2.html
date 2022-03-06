@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css2/bootstrap.min.css">
+    <link rel="stylesheet" href="css2/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="mt-5 mb-5">
+            <h1 class="text-center">Search Image For Slider</h1>
+        </div>
+        <div class="w-50 mx-auto mt-5 mb-5">
+            <div class="input-group mb-3">
+                <input id="input-field" type="text" class="form-control" placeholder="Recipient's username"
+                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button id="search-btn" class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+            </div>
+        </div>
+
+        <!-- select image  -->
+        <div id="select-img" class="mb-5">
+            <div class="d-flex justify-content-between w-75 mx-auto mt-5 mb-5">
+                <h3>Select image for slider</h3>
+                <input id="slider-timing" type="text" class="form-control w-25" placeholder="Enter slider timing"
+                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button id="create-btn" class="btn btn-outline-secondary bg-primary text-white" type="button"
+                    id="button-addon2">Create
+                    Slider</button>
+            </div>
+        </div>
+        <!-- images container  -->
+        <div class="img-container">
+            <div id="display-img" class="row row-cols-1 row-cols-md-4 g-4">
+                
+            </div>
+        </div>
+
+        <!-- show slider img  -->
+        <div class="slider-parent">
+            <div class="btn-controller">
+                <button id="left-btn" onclick="changeImg(-1)"><i class="fa-solid fa-angle-left"></i></button>
+                <button id="right-btn" onclick="changeImg(1)"><i class="fa-solid fa-angle-right"></i></button>
+            </div>
+            <div class="img">
+                <img src="https://images.unsplash.com/photo-1646383418303-ae7c7d50c275?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=845&q=80" alt="">
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="index2.js"></script>
+
+</body>
+
+</html>
